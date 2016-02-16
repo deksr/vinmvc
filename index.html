@@ -25,12 +25,25 @@
 <script src="react-0.14.7/build/react-dom.js"> </script>
 
 <script type="text/javascript">
+
 ReactDOM.render(
-		React.createElement('div', null, 'This is from react'), 
-		document.getElementById('example')
+    
+    // React.DOM.h4(
+   	//   {id: "thisworks"}, 
+   	//   React.DOM.span(null, "Hello"),
+   	//   'This is also working'
+   	// ),
+
+   	React.DOM.h1(
+   	  {className: "thisiscool",
+   	  htmlFor: "me"
+   	}, 
+   	  "hi there I also work"
+   	),
+
+    document.getElementById('example')
   )
-
-
+	
 	</script>
 </body>
 </html>

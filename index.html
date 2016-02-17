@@ -19,15 +19,17 @@
 
 <script type="text/javascript">
 
- var VictoriaCake =  React.createClass({
+ var Cake =  React.createClass({
  	render: function(){
- 		return React.DOM.span("null", "Can I get a custom order please?")
+ 		return React.DOM.span(null, "Can I get a custom order of?" + " " + this.props.name)
  	}
  })
 
 
   ReactDOM.render(
-		React.createElement(VictoriaCake), 
+		React.createElement(Cake,{
+			name: "Fat Rascal"
+		}), 
 		document.getElementById('example')
   )
 

@@ -19,25 +19,33 @@
 
 <script type="text/javascript">
 
- var Cake =  React.createClass({
- 	
- 	propTypes: {
-        name: React.PropTypes.string.isRequired
-      },
+	var Count =  React.createClass({
 
- 	render: function(){
- 		return React.DOM.span(null, "Can I get a custom order of?" + " " + this.props.name)
- 	}
- })
+	 	// set a property
+	 	propTypes: {
+	        text: React.PropTypes.string
+	  },
+
+	  // create elements. "but this is floating"
+	 	render: function(){
+	 		return React.DOM.div(null, 
+	 			React.DOM.textarea({ 
+	 				defaultValue: this.props.text}),
+	 			React.DOM.h4(null, this.props.text.length)
+	 	)}
+
+	})
 
 
-  ReactDOM.render(
-		React.createElement(Cake,{
-			name: "Fat Rascal"
+	
+
+ // "grab them and assign them on the dom"
+ ReactDOM.render(
+		React.createElement(Count,{
+			text: "Dracula"
 		}), 
 		document.getElementById('example')
   )
-
 
 	</script>
 </body>

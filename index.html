@@ -14,36 +14,24 @@
 
 	</div>
 
-
-
-<!-- <script src="https://fb.me/react-0.14.7.js"></script>
-<script src="https://fb.me/react-dom-0.14.7.js"></script> -->
-
-<!-- or
--->
 <script src="react-0.14.7/build/react.js"> </script>
 <script src="react-0.14.7/build/react-dom.js"> </script>
 
 <script type="text/javascript">
 
-ReactDOM.render(
-    
-    // React.DOM.h4(
-   	//   {id: "thisworks"}, 
-   	//   React.DOM.span(null, "Hello"),
-   	//   'This is also working'
-   	// ),
+ var VictoriaCake =  React.createClass({
+ 	render: function(){
+ 		return React.DOM.span("null", "Can I get a custom order please?")
+ 	}
+ })
 
-   	React.DOM.h1(
-   	  {className: "thisiscool",
-   	  htmlFor: "me"
-   	}, 
-   	  "hi there I also work"
-   	),
 
-    document.getElementById('example')
+  ReactDOM.render(
+		React.createElement(VictoriaCake), 
+		document.getElementById('example')
   )
-	
+
+
 	</script>
 </body>
 </html>

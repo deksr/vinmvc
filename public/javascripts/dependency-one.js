@@ -4,7 +4,7 @@ var ReactDOM = require('react-dom');
 
 // This doesn't work in gulp
 ReactDOM.render(
-  <h1>Hello, from react dependency one!</h1>,
+  <h4>Hello, from react dependency one!</h4>,
   document.getElementById('example')
 );
 

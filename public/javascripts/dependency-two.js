@@ -6,28 +6,21 @@ var ReactDOM = require('react-dom');
 var PotOne = React.createClass({ 
   render: function() {
     return (
-      <div className="white-and-green">
-        Hello, world!  dependency two here and var name is potone.
-        <h1> lilly of valley </h1>
+      <div className="flowers">
+      this is from dependency two
+        <h3> {this.props.text}</h3>
       </div>
     );
   }
 });
 
-var PotTwo = React.createClass({ 
-  render: function() {
-    return (
-      <div className="pink-and-green">
-        Hello, world!  dependency two here and var name is pottwo.
-        <h1> Petunia </h1>
-      </div>
-    );
-  }
-});
 
 ReactDOM.render(
 	<div>
-  <PotOne />
-  <PotTwo />
+  <PotOne text = "lobella"/>
+  <PotOne text = "petunia"/>
+  <PotOne text = "zenya"/>
+
+
   </div>, document.getElementById('content')
 );

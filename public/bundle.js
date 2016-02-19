@@ -63,29 +63,12 @@
 	var React = __webpack_require__(2);
 	var ReactDOM = __webpack_require__(159);
 
-	// ReactDOM.render(
-	//   <h1>Hello, from react!</h1>,
-	//   document.getElementById('example')
-	// );
-
-	var Count = React.createClass({
-		displayName: 'Count',
-
-		// set a property
-		propTypes: {
-			text: React.PropTypes.string
-		},
-		// create elements. "but this is floating"
-		render: function render() {
-			return React.DOM.div(null, React.DOM.textarea({
-				defaultValue: this.props.text }), React.DOM.h4(null, this.props.text.length));
-		}
-	});
-
-	// "grab them and assign them on the dom"
-	ReactDOM.render(React.createElement(Count, {
-		text: "Dracula"
-	}), document.getElementById('example'));
+	// This doesn't work in gulp
+	ReactDOM.render(React.createElement(
+	  'h1',
+	  null,
+	  'Hello, from react dependency one!'
+	), document.getElementById('example'));
 
 /***/ },
 /* 2 */
@@ -19697,19 +19680,41 @@
 	var React = __webpack_require__(2);
 	var ReactDOM = __webpack_require__(159);
 
-	var CommentBox = React.createClass({
-	  displayName: 'CommentBox',
+	var potOne = React.createClass({
+	  displayName: 'potOne',
 
 	  render: function render() {
 	    return React.createElement(
 	      'div',
 	      { className: 'commentBox' },
-	      'Hello, world! I am a CommentBox.'
+	      'Hello, world!  dependency two here and this is pot one.',
+	      React.createElement(
+	        'h1',
+	        null,
+	        ' lilly of valley '
+	      )
 	    );
 	  }
 	});
 
-	ReactDOM.render(React.createElement(CommentBox, null), document.getElementById('content'));
+	ReactDOM.render(React.createElement('potOne', null), document.getElementById('content'));
+
+	// var potTwo = React.createClass({
+	//   render: function() {
+	//     return (
+	//       <div className="commentBox">
+	//         Hello, world!  dependency two here and this is pot two.
+	//         <h1> petunia </h1>
+	//       </div>
+	//     );
+	//   }
+	// });
+
+	// ReactDOM.render(<div>
+	//   <potOne />
+	//   <potTwo />
+	//   </div>, document.getElementById('content')
+	// );
 
 /***/ }
 /******/ ]);

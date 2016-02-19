@@ -1,6 +1,6 @@
 
-
-// Gulp works with vanilla javascript in js files in react or elese throws error when it runs into html tags (not working with babel). And too many issues. for minifying etc will be using webpack plugins in webpack. 
+// Bookmark- need to be fixed.
+// Gulp works with vanilla javascript in js files in react or elese throws error when it runs into html tags (not working with babel). for minifying etc will be using webpack plugins in webpack for now. 
 
 
 

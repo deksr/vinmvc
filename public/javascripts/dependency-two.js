@@ -8,7 +8,8 @@ var PotOne = React.createClass({
     return (
       <div className="flowers">
       this is from dependency two
-        <h3> {this.props.text}</h3>
+        <h3> {this.props.text} </h3>
+        <h4> {this.props.children} </h4>
       </div>
     );
   }
@@ -17,9 +18,9 @@ var PotOne = React.createClass({
 
 ReactDOM.render(
 	<div>
-  <PotOne text = "lobella"/>
-  <PotOne text = "petunia"/>
-  <PotOne text = "zenya"/>
+  <PotOne text = "lobella"> in baby blue </PotOne>
+  <PotOne text = "petunia"> in cream </PotOne>
+  <PotOne text = "zenya"> in dark pink </PotOne>
 
 
   </div>, document.getElementById('content')

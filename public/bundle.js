@@ -58,14 +58,12 @@
 
 	'use strict';
 
-	// console.log("this is main.js")
-
 	var React = __webpack_require__(2);
 	var ReactDOM = __webpack_require__(159);
 
 	// This doesn't work in gulp
 	ReactDOM.render(React.createElement(
-	  'h1',
+	  'h4',
 	  null,
 	  'Hello, from react dependency one!'
 	), document.getElementById('example'));
@@ -19680,41 +19678,23 @@
 	var React = __webpack_require__(2);
 	var ReactDOM = __webpack_require__(159);
 
-	var potOne = React.createClass({
-	  displayName: 'potOne',
+	// var name  needs start with caps
+
+	// creating the dom element called garden and how the dom element should look
+	var Garden = React.createClass({
+	  displayName: 'Garden',
 
 	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      { className: 'commentBox' },
-	      'Hello, world!  dependency two here and this is pot one.',
-	      React.createElement(
-	        'h1',
-	        null,
-	        ' lilly of valley '
-	      )
-	    );
+	    return React.createElement('div', { className: 'flowers' });
 	  }
 	});
 
-	ReactDOM.render(React.createElement('potOne', null), document.getElementById('content'));
-
-	// var potTwo = React.createClass({
-	//   render: function() {
-	//     return (
-	//       <div className="commentBox">
-	//         Hello, world!  dependency two here and this is pot two.
-	//         <h1> petunia </h1>
-	//       </div>
-	//     );
-	//   }
-	// });
-
-	// ReactDOM.render(<div>
-	//   <potOne />
-	//   <potTwo />
-	//   </div>, document.getElementById('content')
-	// );
+	// the data that goes and renders on that created dom element
+	ReactDOM.render(React.createElement(
+	  Garden,
+	  null,
+	  ' lawn '
+	), document.getElementById('content'));
 
 /***/ }
 /******/ ]);

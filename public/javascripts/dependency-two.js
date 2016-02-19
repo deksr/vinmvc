@@ -3,25 +3,37 @@ var ReactDOM = require('react-dom');
 
 
 // var name  needs start with caps
-var PotOne = React.createClass({ 
+var Garden = React.createClass({ 
+
+	edit: function(){
+   alert ('editing note')
+	},
+
+	delete: function(){
+   alert ('deleting note')
+	},
+
   render: function() {
     return (
+
       <div className="flowers">
-      this is from dependency two
-        <h3> {this.props.text} </h3>
-        <h4> {this.props.children} </h4>
+      <p> {this.props.children} </p>
+      <span>
+	      <button onClick= {this.edit} className = "someclassname"> edit </button>
+	      <button onClick= {this.remove} className = "someclassname"> delete </button>
+      </span>
       </div>
     );
   }
 });
 
 
-ReactDOM.render(
+//need to always wrap them in div if you want multiple components to render
+ReactDOM.render( 
 	<div>
-  <PotOne text = "lobella"> in baby blue </PotOne>
-  <PotOne text = "petunia"> in cream </PotOne>
-  <PotOne text = "zenya"> in dark pink </PotOne>
-
-
-  </div>, document.getElementById('content')
+		<Garden> lobella </Garden> 
+		<Garden> petunia </Garden>
+		<Garden> zenya </Garden> 
+  </div>
+  , document.getElementById('content')
 );

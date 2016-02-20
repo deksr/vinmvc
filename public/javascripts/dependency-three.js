@@ -4,12 +4,12 @@ import ReactDOM from 'react-dom';
 
 class Plants extends React.Component{
   render(){
+  	  //5
+  	  // console.log(this.props.plants)
   	return (
   		<ul> 
-        <li> English Lavander </li>
-        <li> Ornamental grass </li>
-        <li> Shrub Roses </li> 
-        <li> Hydrengia </li>
+  		//6
+        <li> {this.props.plants.name}, {this.props.plants.color} </li>
   		</ul>
   	)
   }

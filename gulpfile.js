@@ -1,6 +1,9 @@
 
-// Bookmark- need to be fixed.
-// Gulp works with vanilla javascript in js files in react or elese throws error when it runs into html tags (not working with babel). for minifying etc will be using webpack plugins in webpack for now. 
+ // Update: Heck! Gulp is not needed. You cheeky little bugger. It all makes sense now.
+
+ // Bookmark- need to be fixed. see update above
+
+// Gulp works with vanilla javascript in js files in react or else throws error when it runs into html tags (not working with babel). for minifying etc will be using webpack plugins in webpack for now. 
 
 
 

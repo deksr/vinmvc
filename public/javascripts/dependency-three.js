@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import just the plant 
+import Plant from './dependency-four.js';
+
 
 
 class Plants extends React.Component{
   render(){
-  	  //5
-  	  // console.log(this.props.plants)
+  	//5. run map/foreach plant
   	return (
   		<ul> 
-  		//6
-        <li> {this.props.plants.name}, {this.props.plants.color} </li>
+	  		{this.props.plants.map((plant)=>{
+	  			return <Plant key={plant.id} plant={plant} />
+	  		})} 
   		</ul>
   	)
   }

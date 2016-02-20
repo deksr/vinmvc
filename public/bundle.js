@@ -47,7 +47,7 @@
 	"use strict";
 
 	__webpack_require__(1);
-	__webpack_require__(160);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dependency-two.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	// jsx not needed. it is replaced with babel.
 	// react tools not needed either which has jsx
@@ -19668,33 +19668,6 @@
 
 	module.exports = __webpack_require__(4);
 
-
-/***/ },
-/* 160 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(2);
-	var ReactDOM = __webpack_require__(159);
-
-	// var name  needs start with caps
-
-	// creating the dom element called garden and how the dom element should look
-	var Garden = React.createClass({
-	  displayName: 'Garden',
-
-	  render: function render() {
-	    return React.createElement('div', { className: 'flowers' });
-	  }
-	});
-
-	// the data that goes and renders on that created dom element
-	ReactDOM.render(React.createElement(
-	  Garden,
-	  null,
-	  ' lawn '
-	), document.getElementById('content'));
 
 /***/ }
 /******/ ]);

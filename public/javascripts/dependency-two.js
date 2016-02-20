@@ -3,39 +3,41 @@ var ReactDOM = require('react-dom');
 
 
 // var name  needs start with caps
-// component starts here
+// component one starts here
 var Garden = React.createClass({ 
 
-// setting initial state of the dom 
-	getInitialState: function(){
-		return {
-			name: "Lilly of valley",
-			color: "white and green"
+  propTypes: function(){
+    name: React.PropTypes.string
+    season: React.PropTypes.string
+  }, 
+
+
+	getDefaultProps: function(){
+		return{
+			name: "shasta daisy",
+			season: "summer"
 		}
 	},
 
-// add an event to set the new state
-	handleClick: function(){
-   this.setState({
-   	name: "Tulips"
-   })
-	},
 
-// render the elements
-  render: function() {
-    return (
+  render: function(){
+  	var picture;
+
+  	if (this.props.season == "summer"){
+      picture  =  <p> "looks like stars in galaxy when " {this.props.name} is in your garden</p> 
+  	}
+
+  	return (
       <div>
-      <button onClick={this.handleClick}> plant a bulb </button>
-      <br/>
-      You just now planted:  {this.state.name} in color {this.state.color}      
+	      <p> garden landscape: {picture} </p>
+	      <br/>
       </div>
     );
   }
+
 });
-// component ends here
 
 
-//need to always wrap them in div if you want multiple components to render
 ReactDOM.render( 
 	<div>
 		<Garden> </Garden>

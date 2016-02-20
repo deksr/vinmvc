@@ -20,16 +20,36 @@ var Garden = React.createClass({
 	},
 
 
+//state and its custom method
+	getInitialState: function(){
+		return{
+      value: 100
+		}
+	},
+	
+
+	_customMethod: function(){
+	  console.log("some event should fire")
+		this.setState({
+		   	value: 500
+		})
+	},
+
+//****
+
   render: function(){
   	var picture;
 
   	if (this.props.season == "summer"){
-      picture  =  <p> "looks like stars in galaxy when " {this.props.name} is in your garden</p> 
+      picture  =  <p> looks like stars in galaxy when  {this.props.name} is in your garden </p> 
   	}
 
   	return (
       <div>
-	      <p> garden landscape: {picture} </p>
+	      <h3> garden landscape: {picture} </h3>
+	      <h5> count: {this.state.value} </h5>
+	      <button onClick={this._customMethod}> click </button>
+
 	      <br/>
       </div>
     );

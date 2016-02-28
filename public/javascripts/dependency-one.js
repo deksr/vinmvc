@@ -2,9 +2,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 import  WholeSite from './a-wholesite.js';
 
-
-
-
 ReactDOM.render(
 
 	<div>
@@ -13,8 +10,5 @@ ReactDOM.render(
   </div>
   ,document.getElementById('example')
 );
-
-
-
 
 

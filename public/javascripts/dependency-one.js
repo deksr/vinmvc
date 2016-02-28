@@ -1,10 +1,17 @@
-
 var React = require('react');
 var ReactDOM = require('react-dom');
+import  WholeSite from './a-wholesite.js';
+
+
+
 
 ReactDOM.render(
-  <h4>Hello, from react dependency one!</h4>,
-  document.getElementById('example')
+
+	<div>
+  <h4> Some Site</h4>
+  < WholeSite />
+  </div>
+  ,document.getElementById('example')
 );
 
 

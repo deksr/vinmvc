@@ -6,7 +6,7 @@ class Bottom extends React.Component{
   	{/*console.log(this.props) */}
     return (
       <div> 
-       <h4>This is {this.props.bottomtitle}</h4>  
+        This is bottom: there      
       </div>
     )
   }

@@ -6,7 +6,7 @@ ReactDOM.render(
 
 	<div>
   <h4> Some Site</h4>
-  < WholeSite />
+  <WholeSite  />
   </div>
   ,document.getElementById('example')
 );

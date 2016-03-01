@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import  Top from './b-top.js';
-import  Bottom from './c-bottom.js';
+
+import { Link }from 'react-router';
 import  Middleguy from './d-midguy.js';
 
 
@@ -32,10 +32,17 @@ class WholeSite extends React.Component{
 
   render(){
     return (
-      <div>
-        <Top />
+       <div>
+        <h2> Welcome to the whole layout page </h2>
+        <p> <Link to="plantseeds"> plant seeds list </Link> </p>  {''}
+        <p> <Link to="aboutourcompany"> learn about our company </Link>  </p>
+        <p> <Link to="homepage"> home page </Link>  </p>
+
+
+        {this.props.children}
+        **********
         <Middleguy data={this.state.data}/>
-        <Bottom /> 
+
 
       </div>
     )
